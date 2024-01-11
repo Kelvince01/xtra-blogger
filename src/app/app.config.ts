@@ -19,6 +19,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
 import {environment} from "../environments/environment.development";
 import {provideStoreDevtools} from "@ngrx/store-devtools";
+import {NgxSpinnerModule} from "ngx-spinner";
+import {provideToastr} from "ngx-toastr";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -41,13 +43,6 @@ export const appConfig: ApplicationConfig = {
       provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
       provideAuth(() => getAuth()),
       provideAnalytics(() => getAnalytics()),
-      provideFirestore(() => getFirestore()),
-      provideDatabase(() => getDatabase()),
-      provideFunctions(() => getFunctions()),
-      provideMessaging(() => getMessaging()),
-      providePerformance(() => getPerformance()),
-      provideStorage(() => getStorage()),
-      provideRemoteConfig(() => getRemoteConfig()),
       /*
       provideAppCheck(() => {
         // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
@@ -55,8 +50,23 @@ export const appConfig: ApplicationConfig = {
         return initializeAppCheck(undefined, { provider, isTokenAutoRefreshEnabled: true });
       })
        */
+      provideFirestore(() => getFirestore()),
+      provideDatabase(() => getDatabase()),
+      provideFunctions(() => getFunctions()),
+      provideMessaging(() => getMessaging()),
+      providePerformance(() => getPerformance()),
+      provideStorage(() => getStorage()),
+      provideRemoteConfig(() => getRemoteConfig()),
+      NgxSpinnerModule.forRoot({ type: 'ball-spin-clockwise-fade' })
     ]),
     ScreenTrackingService,
-    UserTrackingService
+    UserTrackingService,
+    provideToastr({
+      timeOut: 10000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      closeButton: true,
+      progressBar: true
+    })
   ]
 };
