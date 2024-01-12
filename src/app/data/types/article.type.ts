@@ -1,6 +1,9 @@
 import { BaseType } from './base.type';
 
-export type Article = BaseType & {};
+export type Article = BaseType & {
+  title: string;
+  description: string;
+};
 
 export interface FrequentPayments {
   logo: string;

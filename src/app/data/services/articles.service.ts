@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { GlobalService } from '@shared/services';
 import { Recipient } from '@data/types/article.type';
 import Swal from 'sweetalert2';
+import { from, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -90,5 +91,9 @@ export class ArticlesService {
         }
       });
     }
+  }
+
+  getOne(s: string): Observable<any> {
+    return from(of([]))
   }
 }
