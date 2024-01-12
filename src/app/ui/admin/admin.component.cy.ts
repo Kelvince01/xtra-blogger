@@ -1,7 +1,7 @@
-import { AdminComponent } from './admin.component'
+import { AdminComponent } from './admin.component';
 
 describe('AdminComponent', () => {
   it('should mount', () => {
-    cy.mount(AdminComponent)
-  })
-})
+    cy.mount(AdminComponent);
+  });
+});

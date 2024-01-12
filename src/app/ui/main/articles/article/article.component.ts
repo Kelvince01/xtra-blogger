@@ -5,13 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      article works!
-    </p>
+    <p>article works!</p>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ArticleComponent {
-
-}
+export class ArticleComponent {}

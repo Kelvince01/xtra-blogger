@@ -5,13 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      reset-password works!
-    </p>
+    <p>reset-password works!</p>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ResetPasswordComponent {
-
-}
+export class ResetPasswordComponent {}

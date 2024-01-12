@@ -5,13 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      terms-of-service works!
-    </p>
+    <p>terms-of-service works!</p>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TermsOfServiceComponent {
-
-}
+export class TermsOfServiceComponent {}

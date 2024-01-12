@@ -1,7 +1,7 @@
-import { AboutComponent } from './about.component'
+import { AboutComponent } from './about.component';
 
 describe('AboutComponent', () => {
   it('should mount', () => {
-    cy.mount(AboutComponent)
-  })
-})
+    cy.mount(AboutComponent);
+  });
+});

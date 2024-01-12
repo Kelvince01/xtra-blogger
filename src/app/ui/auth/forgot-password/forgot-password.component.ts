@@ -5,13 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      forgot-password works!
-    </p>
+    <p>forgot-password works!</p>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ForgotPasswordComponent {
-
-}
+export class ForgotPasswordComponent {}

@@ -1,7 +1,7 @@
-import { AuthComponent } from './auth.component'
+import { AuthComponent } from './auth.component';
 
 describe('AuthComponent', () => {
   it('should mount', () => {
-    cy.mount(AuthComponent)
-  })
-})
+    cy.mount(AuthComponent);
+  });
+});

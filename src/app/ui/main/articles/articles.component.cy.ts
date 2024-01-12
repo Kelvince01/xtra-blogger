@@ -1,7 +1,7 @@
-import { ArticlesComponent } from './articles.component'
+import { ArticlesComponent } from './articles.component';
 
 describe('ArticlesComponent', () => {
   it('should mount', () => {
-    cy.mount(ArticlesComponent)
-  })
-})
+    cy.mount(ArticlesComponent);
+  });
+});

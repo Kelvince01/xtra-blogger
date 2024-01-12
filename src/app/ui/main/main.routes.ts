@@ -12,8 +12,8 @@ export default [
         description: 'Page Description or some content here',
         keywords: 'some, keywords, here, separated, by, a comma'
       }
-    },
-  },
+    }
+  }
   // {
   //   path: 'about',
   //   loadComponent: () => import('./about/about.component').then((c) => c.AboutComponent),

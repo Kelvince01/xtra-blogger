@@ -1,7 +1,7 @@
-import { FooterComponent } from './footer.component'
+import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
   it('should mount', () => {
-    cy.mount(FooterComponent)
-  })
-})
+    cy.mount(FooterComponent);
+  });
+});

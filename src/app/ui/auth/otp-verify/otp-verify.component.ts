@@ -5,13 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      otp-verify works!
-    </p>
+    <p>otp-verify works!</p>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OtpVerifyComponent {
-
-}
+export class OtpVerifyComponent {}

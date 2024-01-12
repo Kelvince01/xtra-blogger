@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from '@common-ui/page-not-found/page-not-found.component';
 import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
-import MainComponent from "@main-ui/main.component";
+import MainComponent from '@main-ui/main.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['../accounts/login']);
 

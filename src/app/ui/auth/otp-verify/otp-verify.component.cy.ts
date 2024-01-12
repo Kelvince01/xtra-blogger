@@ -1,7 +1,7 @@
-import { OtpVerifyComponent } from './otp-verify.component'
+import { OtpVerifyComponent } from './otp-verify.component';
 
 describe('OtpVerifyComponent', () => {
   it('should mount', () => {
-    cy.mount(OtpVerifyComponent)
-  })
-})
+    cy.mount(OtpVerifyComponent);
+  });
+});

@@ -20,35 +20,16 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "paths": {
-      "@core/*": [
-        "src/app/core/*"
-      ],
-      "@data/*": [
-        "src/app/data/*"
-      ],
-      "@auth-ui/*": [
-        "src/app/ui/auth/*"
-      ],
-      "@main-ui/*": [
-        "src/app/ui/main/*"
-      ],
-      "@admin-ui/*": [
-        "src/app/ui/admin/*"
-      ],
-      "@common-ui/*": [
-        "src/app/ui/common/*"
-      ],
-      "@shared/*": [
-        "src/app/shared/*"
-      ],
-      "@env": [
-        "src/environments/*"
-      ]
+      "@core/*": ["src/app/core/*"],
+      "@data/*": ["src/app/data/*"],
+      "@auth-ui/*": ["src/app/ui/auth/*"],
+      "@main-ui/*": ["src/app/ui/main/*"],
+      "@admin-ui/*": ["src/app/ui/admin/*"],
+      "@common-ui/*": ["src/app/ui/common/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@env": ["src/environments/*"]
     }
   },
   "angularCompilerOptions": {

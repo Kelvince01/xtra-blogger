@@ -1,7 +1,7 @@
-import { RegisterComponent } from './register.component'
+import { RegisterComponent } from './register.component';
 
 describe('RegisterComponent', () => {
   it('should mount', () => {
-    cy.mount(RegisterComponent)
-  })
-})
+    cy.mount(RegisterComponent);
+  });
+});

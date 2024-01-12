@@ -8,7 +8,12 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideStore } from '@ngrx/store';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
-import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import {
+  getAnalytics,
+  provideAnalytics,
+  ScreenTrackingService,
+  UserTrackingService
+} from '@angular/fire/analytics';
 // import { initializeAppCheck, ReCaptchaEnterpriseProvider, provideAppCheck } from '@angular/fire/app-check';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
@@ -17,19 +22,35 @@ import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getPerformance, providePerformance } from '@angular/fire/performance';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
-import {environment} from "../environments/environment.development";
-import {provideStoreDevtools} from "@ngrx/store-devtools";
-import {NgxSpinnerModule} from "ngx-spinner";
-import {provideToastr} from "ngx-toastr";
+import { environment } from '../environments/environment.development';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { provideToastr } from 'ngx-toastr';
+import {
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+  withInterceptorsFromDi,
+  withJsonpSupport
+} from '@angular/common/http';
+import { provideBaseProviders } from '@core/providers';
+import { spinnerInterceptor } from '@core/interceptors';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideHttpClient(
+      withInterceptorsFromDi(),
+      withInterceptors([spinnerInterceptor()]),
+      withFetch(),
+      withJsonpSupport()
+    ),
+    ...provideBaseProviders(),
     provideClientHydration(),
     provideAnimations(),
     provideServiceWorker('ngsw-worker.js', {
-        enabled: !isDevMode(),
-        registrationStrategy: 'registerWhenStable:30000'
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
     }),
     provideStore(),
     provideStoreDevtools({
@@ -37,7 +58,7 @@ export const appConfig: ApplicationConfig = {
       logOnly: !isDevMode(), // Restrict extension to log-only mode
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open
       trace: false, //  If set to true, will include stack trace for every dispatched action, so you can see it in trace tab jumping directly to that part of code
-      traceLimit: 75, // maximum stack trace frames to be stored (in case trace option was provided as true)
+      traceLimit: 75 // maximum stack trace frames to be stored (in case trace option was provided as true)
     }),
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),

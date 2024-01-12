@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       <div>
         <h3 class="text-3xl font-bold">Overview</h3>
       </div>
-    
+
       <section class="flex flex-col xl:flex-row pt-7">
         <div class="flex flex-col flex-1">
           <span class="text-2xl font-bold">Quick Transfer</span>
@@ -54,59 +54,41 @@ import { ReactiveFormsModule } from '@angular/forms';
               </button>
             </form>
           </div>
-    
+
           <div class="flex flex-col">
             @if (
-              transactionService.numberControl?.invalid &&
-              transactionService.numberControl?.touched
-              ) {
-              <div
-                >
+              transactionService.numberControl?.invalid && transactionService.numberControl?.touched
+            ) {
+              <div>
                 @if (this.transactionService.numberControl?.errors?.['required']) {
-                  <small
-                    class="text-danger"
-                    >
+                  <small class="text-danger">
                     *Phone number is required. Start with zero, followed by the other 9 digits.
                   </small>
                 }
                 @if (this.transactionService.numberControl?.errors?.['minlength']) {
-                  <small
-                    class="text-danger"
-                    >
-                    *Phone number cannot be less than 10 digits
-                  </small>
+                  <small class="text-danger">*Phone number cannot be less than 10 digits</small>
                 }
               </div>
             }
-    
+
             @if (
-              transactionService.amountControl?.invalid &&
-              transactionService.amountControl?.touched
-              ) {
-              <div
-                >
+              transactionService.amountControl?.invalid && transactionService.amountControl?.touched
+            ) {
+              <div>
                 @if (this.transactionService.amountControl?.errors?.['required']) {
-                  <small
-                    class="text-danger"
-                    >
-                    *Amount is required
-                  </small>
+                  <small class="text-danger">*Amount is required</small>
                 }
                 @if (this.transactionService.amountControl?.errors?.['min']) {
-                  <small
-                    class="text-danger"
-                    >
-                    *Amount cannot be less than Kshs. 5
-                  </small>
+                  <small class="text-danger">*Amount cannot be less than Kshs. 5</small>
                 }
               </div>
             }
           </div>
         </div>
-    
+
         <div class="flex flex-col flex-1 px-0 xl:px-12 mt-12 xl:mt-0">
           <span class="text-2xl font-bold">Recent Transactions</span>
-    
+
           <div class="mt-8 flex flex-col">
             @for (transaction of recentTransactions; track transaction) {
               <div class="flex flex-row mb-5">
@@ -120,7 +102,7 @@ import { ReactiveFormsModule } from '@angular/forms';
                 </div>
               </div>
             }
-    
+
             @for (transaction of realtimeTransactionUpdates; track transaction) {
               <div class="flex flex-row mb-5">
                 <div class="flex flex-col flex-1">
@@ -135,7 +117,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             }
           </div>
         </div>
-    
+
         <div class="sidebar flex flex-col flex-2 my-12 xl:my-0">
           <span class="text-2xl font-bold">Frequent Payments</span>
           <div class="mt-8 flex flex-col md:flex-row space-x-0 md:space-x-3">
@@ -154,7 +136,7 @@ import { ReactiveFormsModule } from '@angular/forms';
               </div>
             }
           </div>
-    
+
           <div class="flex flex-col mt-20 items-center content-center">
             <img class="w-80" alt="statistics" src="assets/svgs/dashboard/statistics.svg" />
             <p class="text-2xl font-bold text-gray-600 mt-12">Check in later for the statistics</p>
@@ -162,7 +144,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         </div>
       </section>
     </section>
-    `,
+  `,
   styles: [
     `
       .is-invalid {

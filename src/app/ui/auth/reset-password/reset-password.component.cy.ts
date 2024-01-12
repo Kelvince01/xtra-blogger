@@ -1,7 +1,7 @@
-import { ResetPasswordComponent } from './reset-password.component'
+import { ResetPasswordComponent } from './reset-password.component';
 
 describe('ResetPasswordComponent', () => {
   it('should mount', () => {
-    cy.mount(ResetPasswordComponent)
-  })
-})
+    cy.mount(ResetPasswordComponent);
+  });
+});

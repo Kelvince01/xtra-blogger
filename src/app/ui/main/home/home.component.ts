@@ -12,8 +12,9 @@ import { RouterLink } from '@angular/router';
       </div>
       <div class="flex-1 w-10/12 md:w-7/12 mb-8">
         <p class="text-xl text-center">
-          We help customers more by recommending Xtra Blog. Send & receive money from your friends and
-          into your MPESA wallet. You can send money to anyone in the world with just a few clicks.
+          We help customers more by recommending Xtra Blog. Send & receive money from your friends
+          and into your MPESA wallet. You can send money to anyone in the world with just a few
+          clicks.
         </p>
       </div>
 

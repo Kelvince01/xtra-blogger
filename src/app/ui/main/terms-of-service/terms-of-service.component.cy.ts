@@ -1,7 +1,7 @@
-import { TermsOfServiceComponent } from './terms-of-service.component'
+import { TermsOfServiceComponent } from './terms-of-service.component';
 
 describe('TermsOfServiceComponent', () => {
   it('should mount', () => {
-    cy.mount(TermsOfServiceComponent)
-  })
-})
+    cy.mount(TermsOfServiceComponent);
+  });
+});
